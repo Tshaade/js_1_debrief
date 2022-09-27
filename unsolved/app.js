@@ -12,6 +12,22 @@ console.log('Your JS file is linked!');
 
 //Write your code for FizzBuzz below this line:
 
+let myNumber = 9;
+
+if (typeof myNumber === 'number') {
+    console.log('This is a number');
+} else if (typeof myNumber !== 'number') {
+    console.log('This is not a number');
+} else if (myNumber / 3) {
+    console.log('Fizz');
+} else if (myNumber / 5) {
+    console.log('Buzz');
+} else if (myNumber / 15) {
+    console.log('FizzBuzz');
+} else {
+    console.log(`The value of the number is ${myNumber}`);
+}
+
 
 
 
@@ -29,10 +45,34 @@ console.log('Your JS file is linked!');
 
 //Write your code for the E-Commerce item list below this line:
 
+let item = '';
 
+switch (item) {
+    case 'Shoes':
+        console.log('Shoes are $50');
+        break;
+    case 'Jeans':
+        console.log('Jeans are $25');
+        break;
+    case 'Hat':
+        console.log('Hats are $12');
+        break;
+    case 'Socks':
+        console.log('Socks are $50');
+        break;
+        default:
+            console.log('Invalid Item');
+}
 
 
 //3. Print a random integer (whole number) between 50(inclusive) and 100(exclusive) to the console
 // Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 
 //Write your code below this line:
+
+function getRandomInt(min = 50, max = 100) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min);
+  }
+  
